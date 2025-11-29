@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<!--    
+    Document   : Página de Login do Responsável
+    Created on : 16 de nov. de 2025
+    Author     : Zenalvo Junior
+-->
+
+<html>
+    <head>
+        <title>Login - Responsável</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="css/index_style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="index-login">
+        <div class="container">
+            <img src="svg/Ativo 4Logo_AutorizAi_Vertical_Azul.svg" alt="Logo AutorizAí Completa Vertical">
+            <h2>RESPONSÁVEL</h2>
+            <form method="post" action="LoginController">
+                <input id="email" name="email" type="email" placeholder="Insira o seu e-mail" required>
+                <input id="senha" name="senha" type="password" placeholder="Senha" required>
+                
+                <!--Envia para o LoginController para saber qual página voltar caso dê erro-->
+                <input type="hidden" name="tipo" value="responsavel">
+                
+                <button type="submit" class="btn-default">Entrar</button>
+                
+                <div class="links">
+                    <a href="#" target="_blank">Esqueceu sua senha?</a>
+                    <a href="cadastrarResponsavel/validaRA.html">Crie sua conta!</a>
+                </div>
+            </form>
+         </div>
+        
+        <!--Script JS para informar erro de email ou senha incorreta-->
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            if (params.get("erro") === "1") {
+                alert("E-mail ou senha incorretos!");
+            }
+        </script>
+    </body>
+</html>

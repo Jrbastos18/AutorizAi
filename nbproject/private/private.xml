@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/index.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/responsavel/index.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/controller/LoginController.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/css/index_style.css</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/css/sidebar.css</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/AlunoDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/components/sidebar-escola.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/criar-autorizacao.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/controller/CadastrarAutorizacao.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/AutorizacaoDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/listar-autorizacoes.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/cadastrar-aluno.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/DestinoAutorizacaoDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/AlunoResponsavelDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/EnderecoDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/EscolaDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/RespostaAutorizacaoDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/controller/CadastrarAluno.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/cadastrarResponsavel/index.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/aluno.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/listar-alunos.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/responsavel/perfil-aluno.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/components/sidebar-responsavel.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/Autorizacao.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/Aluno.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/responsavel/autorizacoes-pendentes.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DestinoAutorizacao.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/Responsavel.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/RespostaAutorizacao.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DAO/ResponsavelDAO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DTO/AutorizacaoPendenteDTO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/controller/ProcessarAutorizacao.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/responsavel/historico.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/DTO/HistoricoDTO.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/alterarAluno.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/controller/SalvarAlteracaoAluno.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/web/dashboard/escola/alterarAutorizacao.jsp</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/controller/SalvarAlteracaoAutorizacao.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/Login.java</file>
+            <file>file:/C:/Users/junio/OneDrive/Documentos/NetBeansProjects/AutorizAi/src/java/model/Endereco.java</file>
+        </group>
+    </open-files>
+</project-private>

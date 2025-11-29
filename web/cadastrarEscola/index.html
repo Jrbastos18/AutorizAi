@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<!--    
+    Document   : Página de Cadastro da Escola
+    Created on : 16 de nov. de 2025
+    Author     : Zenalvo Junior
+-->
+
+<html>
+    <head>
+        <title>Cadastro - Escola</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="../css/index_style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <form method="post" action="cadastrarEscola.jsp">
+                <div class="form-group">
+                    <label for="nome">Nome da Escola:</label>
+                    <input id="nome" name="nome" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cnpj">CNPJ:</label>
+                    <input id="cnpj" name="cnpj" type="text" maxlength="14" pattern="\d{14}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input id="telefone" name="telefone" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="img_logo">Logo:</label>
+                    <input id="img_logo" name="img_logo" type="file" size="64" accept=".jpeg,.png,.jpg,.svg">
+                </div>
+
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input id="cep" name="cep" type="text" maxlength="8" pattern="\d{8}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="logradouro">Logradouro:</label>
+                    <input id="logradouro" name="logradouro" type="text" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero">Número:</label>
+                    <input id="numero" name="numero" type="text" maxlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="complemento">Complemento:</label>
+                    <input id="complemento" name="complemento" type="text" placeholder="Opcional">
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input id="bairro" name="bairro" type="text" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input id="cidade" name="cidade" type="text" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="uf">UF:</label>
+                    <input id="uf" name="uf" type="text" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <input id="estado" name="estado" type="text" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha: </label>
+                    <input id="senha" name="senha" type="password" placeholder="Insira senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmaSenha">Confirme a senha: </label>
+                    <input id="confirmaSenha" name="confirmaSenha" type="password" placeholder="Confirmar senha" required>
+                </div>
+
+                <button type="submit" onclick="return validarSenha()" class="btn-default">Cadastrar Escola</button>
+            </form>
+        </div>
+
+
+        <!--Script para chamar API e preencher formulário dinamicamente sem precisar atualizar a página via JSP-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Script para chamar API e preencher formulário dinamicamente sem precisar atualizar a página via JSP
+                document.getElementById("cep").addEventListener("blur", function () {
+
+                    const cep = this.value.replace(/\D/g, "");
+
+                    if (cep.length !== 8) {
+                        alert("CEP inválido!");
+                        return;
+                    }
+
+                    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                            .then(response => response.json())
+                            .then(data => {
+
+                                if (data.erro) {
+                                    alert("CEP não encontrado!");
+                                    document.getElementById("cep").value = "";
+                                    return;
+                                }
+
+                                // Preenche os campos
+                                document.getElementById("logradouro").value = data.logradouro;
+                                document.getElementById("bairro").value = data.bairro;
+                                document.getElementById("cidade").value = data.localidade;
+                                document.getElementById("uf").value = data.uf;
+                                document.getElementById("estado").value = data.estado;
+                            })
+                            .catch(err => {
+                                console.error("Erro ao buscar CEP:", err);
+                                alert("Erro ao buscar CEP");
+                            });
+
+                });
+            });
+
+            // Função para validar se as senhas coincidem
+            function validarSenha() {
+                const senha = document.getElementById("senha").value;
+                const confirma = document.getElementById("confirmaSenha").value;
+
+                if (senha !== confirma) {
+                    document.getElementById("senha").value = "";
+                    document.getElementById("confirmaSenha").value = "";
+                    alert("As senhas não coincidem!");
+                    return false; // impede o submit
+                }
+
+                return true; // permite enviar
+            }
+        </script>
+    </body>
+</html>

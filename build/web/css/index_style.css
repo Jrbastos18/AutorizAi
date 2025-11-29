@@ -1,0 +1,152 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Document: CSS para estilo geral
+    Created on : 20 de nov. de 2025
+    Author     : Zenalvo Junior
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EFF1F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.index-login {
+    background-image: url('../img/Imagem_Livro_Oculos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1920px 1080px;
+}
+
+.container {
+    width: 678px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 18px;
+    gap: 12px;
+    
+    color: #2E4765;
+}
+
+.container h2 {
+    margin: 0px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.container h3 {
+    margin: 0px;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 546px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #2E4765;
+}
+
+form input {
+    width: 546px;
+    height: 56px;
+    background-color: #F5F7FD;
+    border: 3px solid #FFDC68;
+    border-radius: 15px;
+    
+    padding: 12px;
+    color: #676B84;
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+form input::placeholder {
+    color: #676B84;
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 0px 0px 6px 4px rgba(255, 220, 104, 0.6);
+}
+
+/* Remove as setas (Chrome/Edge/Opera) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-default {
+    width: 546px;
+    height: 58px;
+    background-color: #FFDC68;
+    color: #2E4765;
+    border-radius: 15px;
+    font-size: 2em;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-default:hover {
+    background-color: #B19849;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    padding: 0px 12px;
+}
+
+.links a {     
+    color: #2E4765;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #000000;  /* cor no hover */
+}
+
+.foto-perfil {
+    border-radius: 50%;
+}

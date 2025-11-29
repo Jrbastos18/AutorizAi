@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<!--    
+    Document   : Página para validação do RA do aluno para seguir com o cadastro do responsável
+    Created on : 19 de nov. de 2025
+    Author     : Zenalvo Junior
+-->
+
+<html>
+    <head>
+        <title>Verifica RA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="../css/index_style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">        
+            <form method="post" action="../ValidarRA">
+                <h2>Informe o RA do aluno para continuar com o cadastro!</h2>
+                <input id="ra" name="ra" type="text" inputmode="numeric" pattern="\d{11}" maxlength="11" required>
+
+                <button type="submit" class="btn-default">Validar RA</button>
+            </form>
+        </div>
+
+        <script>
+            // Erro caso não encontre o RA digitado e verificado pelo Servlet
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('erro') === '1') {
+                alert('RA não encontrado!');
+            }
+        </script>
+    </body>
+</html>
